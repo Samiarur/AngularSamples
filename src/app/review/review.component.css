@@ -1,0 +1,17 @@
+.description{
+    background-color: blue
+}
+.thumpnail{
+    float:left;
+    background-color: pink;
+    width:100px;
+    height:100px;
+    margin:2px;
+}
+.desc{
+    background-color:chocolate;
+    height:100px;
+    width:80px;
+    float:right;
+    position:relative;
+}

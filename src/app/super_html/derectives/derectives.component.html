@@ -1,0 +1,78 @@
+<p>
+  derectives works!
+</p>
+friends:{{Friends}}
+<ul>
+  <li *ngFor="let f of friends; let counter=index">
+    {{f}}
+    Counter number{{number}} 
+    <button (Click)="displayText()">Click{{f}}</button>
+  </li>
+</ul>
+<hr>
+<div>
+  Demo of *ngFor derecive array:
+  <table>
+    
+      <tr *ngFor="let l of locations">
+        <td> 
+          {{l.id}}       
+        </td>
+        <td>    
+            {{l.city}}           
+          </td>
+          <td>    
+              {{l.code}}           
+            </td>
+      </tr>    
+  </table>  
+</div>
+<div>
+    <table>    
+        <tr *ngFor="let u of users">
+          <td> 
+            {{u.id}}       
+          </td>
+          <td>    
+              {{u.username}}           
+            </td>  
+            <td>    
+                {{u.address.suite}}           
+              </td>                 
+        </tr>    
+    </table>
+</div>
+<div>
+  Demo of *ngIf directive
+  <button (click)="toggleCheck()">toggle check</button>
+  <div class="box" *ngIf="check"></div>
+  <br>
+  demo of *ngif else criteria  
+  <div c;ass="yesbox" *ngIf="checkelse; else elseTemplate">
+    I am here
+  </div>
+<ng-template #elseTemplate>
+  <div>
+else template
+</div>
+</ng-template>
+</div>
+<div>
+  demo of "ngSwitch Directive"
+  <div [ngSwitch]=locat>
+    <span *ngSwitchCase="'044'">Chennai</span>
+    <span *ngSwitchCase="'045'">Mumbai</span>
+    <span *ngSwitchCase="'046'">Chennai</span>
+    <span *ngSwitchDefault>not ....</span>
+  </div>
+</div>
+<div>
+  Demo of pipes(inbult):
+  <br>
+  savings : {{money|currency:'JPY'}}  
+  <br>
+  Birthday:{{birthday|date:'shortDate'}}
+  <br>
+
+</div>
+
